@@ -1,0 +1,9 @@
+:~  title+'Your app'
+    info+'A test agent for the OS sandbox'
+    color+0x2e.4347
+    glob-http+['https://bootstrap.urbit.org/glob-0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o.glob' 0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o]
+    base+'dev-app'
+    version+[0 0 1]
+    website+'https://github.com/holium/os-sandbox'
+    license+'MIT'
+==
