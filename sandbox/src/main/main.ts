@@ -9,7 +9,7 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import { app, BrowserWindow, shell, session } from 'electron';
+import { app, BrowserWindow, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import isDev from 'electron-is-dev';
@@ -17,15 +17,6 @@ import { resolveHtmlPath } from './util';
 import FullscreenHelper from './helpers/fullscreen';
 import WebviewHelper from './helpers/webview';
 import DevHelper from './helpers/dev';
-import MediaHelper from './helpers/media';
-
-// Ad block
-import { ElectronBlocker } from '@cliqz/adblocker-electron';
-import fetch from 'cross-fetch'; // required 'fetch'
-
-ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
-  blocker.enableBlockingInSession(session.fromPartition('browser-webview'));
-});
 
 export default class AppUpdater {
   constructor() {
@@ -92,11 +83,11 @@ const createWindow = async () => {
     titleBarStyle: 'hidden',
     vibrancy: 'under-window',
     icon: getAssetPath('icon.png'),
-    title: 'Realm',
+    title: 'OS Sandbox',
     acceptFirstMouse: true,
     paintWhenInitiallyHidden: true,
     webPreferences: {
-      // devTools: false,
+      devTools: false,
       nodeIntegration: false,
       webviewTag: true,
       contextIsolation: true,
@@ -111,9 +102,8 @@ const createWindow = async () => {
   // ---------------------------------------------------------------------
 
   FullscreenHelper.registerListeners(mainWindow);
-  WebviewHelper.registerListeners(mainWindow);
+  WebviewHelper.registerListeners();
   DevHelper.registerListeners(mainWindow);
-  MediaHelper.registerListeners(mainWindow);
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));
 

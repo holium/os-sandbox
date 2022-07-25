@@ -93,11 +93,7 @@ type TextButtonProps = {
 
 export const TextButton: FC<TextButtonProps> = (props: TextButtonProps) => {
   return (
-    <div
-      className={
-        props.disabled ? 'dynamic-mouse-disabled' : 'realm-cursor-hover'
-      }
-    >
+    <div className={props.disabled ? 'dynamic-mouse-disabled' : 'cursor-hover'}>
       <TextButtonStyle {...props}></TextButtonStyle>
     </div>
   );

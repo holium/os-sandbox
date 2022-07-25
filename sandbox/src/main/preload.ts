@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer, webFrame } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
 
 const appPreload = {
   setFullscreen(callback: any) {
@@ -12,12 +12,6 @@ const appPreload = {
   },
   setPartitionCookies: (partition: any, cookies: any) => {
     return ipcRenderer.invoke('set-partition-cookies', partition, cookies);
-  },
-  closeApp: (app: any) => {
-    return ipcRenderer.invoke('close-app', app);
-  },
-  askForMicrophone: () => {
-    return ipcRenderer.invoke('ask-for-microphone');
   },
   toggleDevTools: () => {
     return ipcRenderer.invoke('toggle-devtools');

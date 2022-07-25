@@ -74,7 +74,7 @@ export const MenuItem: FC<MenuItemProps> = (props: Partial<MenuItemProps>) => {
       flexDirection="row"
       alignItems="center"
       justifyContent="flex-start"
-      className="realm-cursor-hover"
+      className="cursor-hover"
       intent={intent}
       color={color}
       data-prevent-context-close={disabled}

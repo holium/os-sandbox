@@ -1,4 +1,4 @@
-import { BrowserWindow, ipcMain, session } from 'electron';
+import { BrowserWindow, ipcMain } from 'electron';
 
 export const registerListeners = (mainWindow: BrowserWindow) => {
   ipcMain.handle('toggle-devtools', (_event: any) => {
