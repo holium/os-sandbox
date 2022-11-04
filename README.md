@@ -35,12 +35,45 @@ Realm passes in these CSS variables which you can then leverage in whatever way 
 
 ### How to use
 
+#### CSS variable injection
+
 ```css
 body {
   /* #FFFFF will be used if the app is not opened in Realm, i.e. Landscape */
   background-color: var(--rlm-window-color, #FFFFF);
 }
 ```
+
+#### scry %spaces
+
+Scry the following: `/spaces/<space-path>.json`
+
+Reponse:
+```json
+{
+    "space": {
+        "name": "~dev",
+        "theme": {
+            "windowColor": "#fff",
+            "accentColor": "#4E9EFD",
+            "inputColor": "#fff",
+            "backgroundColor": "#C4C3BF",
+            "dockColor": "#fff",
+            "mode": "light",
+            "iconColor": "rgba(95,94,88,0.3)",
+            "wallpaper": "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=100",
+            "textColor": "#333333"
+        },
+        "picture": "",
+        "path": "/~dev/our",
+        "type": "our",
+        "updatedAt": 1664811378253,
+        "color": "#000000"
+    }
+}
+
+```
+
 
 ### Examples
 
