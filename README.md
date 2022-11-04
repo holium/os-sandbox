@@ -33,7 +33,7 @@ Realm passes in these CSS variables which you can then leverage in whatever way 
 - `--rlm-text-color`
 - `--rlm-icon-color`
 
-Example: 
+### How to use
 
 ```css
 body {
@@ -41,3 +41,16 @@ body {
   background-color: var(--rlm-window-color, #FFFFF);
 }
 ```
+
+### Examples
+
+Engram implemented Realm theming using `os-sandbox`
+
+<img width="779" alt="image" src="https://user-images.githubusercontent.com/6413077/199961305-ab167991-4271-4f5b-a698-96b2ef085ef2.png">
+<img width="779" alt="image" src="https://user-images.githubusercontent.com/6413077/199961359-5331fba1-2307-48d3-9470-a566ab6702ae.png">
+
+### Future theming
+
+We plan to expand how customizable the system is, such as border-radius, window adornments, etc.
+
+
