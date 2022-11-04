@@ -38,6 +38,6 @@ Example:
 ```css
 body {
   /* #FFFFF will be used if the app is not opened in Realm, i.e. Landscape */
-  background-color: var(--rlm-window-color, '#FFFFF');
+  background-color: var(--rlm-window-color, #FFFFF);
 }
 ```
